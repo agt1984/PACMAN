@@ -1,18 +1,25 @@
 
+import javax.swing.JFrame; 
+
 public class App {
     public static void main(String[] args) throws Exception {
-       int rowCount = 21;
-       int columnCount = 19;
-       int tileSize = 32;
-       int boardWidth = columnCount * tileSize;
-       int boardHeight = rowCount * tileSize;
+                      // Define the dimensions of the game board
+        int rowCount = 21;                          // Number of rows
+        int columnCount = 19;                       // Number of columns
+        int tileSize = 32;                          // Size of each cell in pixels
 
-       JFrame frame = new JFrame("Pac-Man");
-       frame.setVisible(true);
-       frame.setLocationRelativeTo(null);
-       frame.setResizable(false);
+                      // Calculate the total size of the board
+        int boardWidth = columnCount * tileSize;    // Total width
+        int boardHeight = rowCount * tileSize;      // Total height
+
+                      // Create and configure the game window
+        JFrame frame = new JFrame("Pac-Man");
+        frame.setVisible(true);                    // Make the window visible
+        frame.setLocationRelativeTo(null);         // Center the window on the screen
+        frame.setResizable(false);         // Prevent the window from being resized
     }
 }
+
 
 
 
