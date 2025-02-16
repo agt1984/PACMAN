@@ -2,6 +2,27 @@ import java.awt.*;
 import javax.swing.*;
 
 public class PacMan extends JPanel{
+    class Block {
+        int x;
+        int y;
+        int width;
+        int height;
+        Image image;
+
+        int startX;
+        int startY;
+
+        Block(Image image, int x, int y, int width, int height) {
+            this.image = image;
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.startX = x;
+            this.startY = y;
+        }
+    }
+
     private int rowCount = 21;                          // Number of rows
     private int columnCount = 19;                       // Number of columns
     private int tileSize = 32;                          // Size of each cell in pixels
