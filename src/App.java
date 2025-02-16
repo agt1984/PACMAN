@@ -7,16 +7,16 @@ public class App {
         int rowCount = 21;                          // Number of rows
         int columnCount = 19;                       // Number of columns
         int tileSize = 32;                          // Size of each cell in pixels
-
-                      // Calculate the total size of the board
         int boardWidth = columnCount * tileSize;    // Total width
         int boardHeight = rowCount * tileSize;      // Total height
 
                       // Create and configure the game window
         JFrame frame = new JFrame("Pac-Man");
         frame.setVisible(true);                    // Make the window visible
+        frame.setSize(boardWidth, boardHeight);
         frame.setLocationRelativeTo(null);         // Center the window on the screen
         frame.setResizable(false);         // Prevent the window from being resized
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
 
