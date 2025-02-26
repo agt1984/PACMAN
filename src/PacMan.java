@@ -1,7 +1,5 @@
 import java.awt.*;
-import java.awt.event.*;
 import java.util.HashSet;
-import java.util.Random;
 import javax.swing.*;
 
 @SuppressWarnings("unused")
@@ -107,8 +105,21 @@ public class PacMan extends JPanel{
                 int x = c*tileSize;
                 int y = r*tileSize;
 
-                if (tileMapChar == 'X') {
+                if (tileMapChar == 'X') { //muro de bloques
                     Block wall = new Block(wallImage, x, y, tileSize, tileSize);
+                    walls.add(wall);
+                }
+                else if (tileMapChar == 'b') { //fantasma azul
+                    Block ghost = new Block(blueGhostImage, x, y, tileSize, tileSize);
+                    ghosts.add(ghost);
+                }
+                else if (tileMapChar == 'o') { //orange ghost
+                    Block ghost = new Block(orangeGhostImage, x, y, tileSize, tileSize);
+                    ghosts.add(ghost);
+                }
+                else if (tileMapChar == 'p') { // pink ghost
+                    Block ghost = new Block(pinkGhostImage, x, y, tileSize, tileSize);
+                    ghosts.add(ghost);
                 }
             }
         }
